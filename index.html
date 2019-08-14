@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/portal.css">
     <link rel="stylesheet" type="text/css" href="css/spinner.css">
+
 </head>
 
 <body>
@@ -56,7 +57,7 @@
                             <label for="user_password" class="control-label">Password:</label>
                             <input type="password" id="user_password" class="form-control" name="user_password" />
                         </div>
-                        <div class="form-group pad-top-20 form-group-checkbox terms">
+                        <div class="form-group pad-top-10 form-group-checkbox terms">
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox" id="user_terms" name="user_terms">
@@ -65,9 +66,33 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="pad-top-20 pad-btm-20">
+                        <div class="pad-top-10 pad-btm-10">
                             <input type="submit" class="btn btn-default btn-block btn-lg" value="Continue">
                         </div>
+			<div class="pad-top-10 pad-btm-10">
+			<form> 
+                            <input id='script' type="button" class="btn btn-default btn-block btn-lg" onclick="parent.location='exec.php'" value="TAP ID LOGIN DETAILS">
+			</form>
+			
+			</div>
+                        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+			<!-- <script>
+    			$(#script).click(function(ev) {
+				ev.preventDefault();
+        			$.ajax({
+              				type:'GET',
+              				url: "/home/pi/MFRC522-python/main.py",
+              				cache:false,
+					dataType:"html",
+					data: $('form').serialize(),
+              				success: function(response){
+                 				console.log(response);
+                 				alert(response);
+						$('#output').html(response);
+              				}
+      				});
+    			});
+			</script> -->
                         <div class="text-center register">
                             <p>Do you wish to register<br> for <a href="#" class="link user-actions"><strong>a new
                                         account</strong></a>?</p>
@@ -80,8 +105,8 @@
             <div class="dialog-content">
                 <div class="dialog-global-error"></div>
                 <form id="register_form" class="dialog-form" action="" method="POST">
-		    <img src="../images/logo2.png" width="260" height="80"></img>
-                    <fieldset>
+                    <img src="../images/logo2.png" width="260" height="80"></img>
+		    <fieldset>
                         <legend>Register</legend>
                         <div class="form-group">
                             <label for="user_username" class="control-label">Username:</label>
