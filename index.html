@@ -70,29 +70,29 @@
                             <input type="submit" class="btn btn-default btn-block btn-lg" value="Continue">
                         </div>
 			<div class="pad-top-10 pad-btm-10">
-			<form> 
-                            <input id='script' type="button" class="btn btn-default btn-block btn-lg" onclick="parent.location='exec.php'" value="TAP ID LOGIN DETAILS">
-			</form>
-			
 			</div>
-                        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
-			<!-- <script>
-    			$(#script).click(function(ev) {
-				ev.preventDefault();
-        			$.ajax({
-              				type:'GET',
-              				url: "/home/pi/MFRC522-python/main.py",
+			<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+			<!--<p></p>
+			<script type="text/javascript">
+			$(document).ready(function(){
+				$("button").click(function(){
+				$.ajax({
+              				url:"exec.php"
+              				type: "POST",
               				cache:false,
-					dataType:"html",
-					data: $('form').serialize(),
-              				success: function(response){
-                 				console.log(response);
-                 				alert(response);
-						$('#output').html(response);
-              				}
+					success: function(output){
+                 				alert(output);
+						$("p").text(output);
+              				}, 
+					error: function(xhr){
+						alert("error");
+					}
       				});
-    			});
-			</script> -->
+				});
+    			};
+			</script>-->
+			
+			<?php echo "hello world"; ?>
                         <div class="text-center register">
                             <p>Do you wish to register<br> for <a href="#" class="link user-actions"><strong>a new
                                         account</strong></a>?</p>
